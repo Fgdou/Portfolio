@@ -1,0 +1,51 @@
+.home {
+    display: grid;
+    grid-template-columns: auto min-content;
+
+    padding-top: 142px;
+
+    .text {
+        display: flex;
+        flex-direction: column;
+        justify-self: stretch;
+        gap: 90px;
+
+        .title {
+            h1 {
+                font-size: 40px;
+                font-weight: 700;
+                margin-bottom: 12px;
+            }
+            h2 {
+                font-size: 20px;
+                font-weight: 700;
+            }
+        }
+    }
+
+    .logo-list {
+        h3 {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+
+        &>div {
+            display: flex;
+            gap: 30px;
+            flex-wrap: wrap;
+
+            .logo {
+                height: 100px;
+            }
+        }
+    }
+
+    .profile-picture {
+        width: 338px;
+        height: 400px;
+        object-fit: cover;
+        border-radius: 100px;
+        box-shadow: -3px 37px 70px 0px rgba(0, 0, 0, 0.37);
+    }
+}
