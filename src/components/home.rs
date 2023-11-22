@@ -92,9 +92,7 @@ pub fn Home() -> Html {
                 <LogoList title="Languages" logos={languages}/>
                 <LogoList title="Technologies" logos={technos}/>
             </div>
-            <div>
-                <img class="profile-picture" src="/assets/img/profile.jpeg"/>
-            </div>
+            <img class="profile-picture" src="/assets/img/profile.jpeg"/>
         </div>
     }
 }
