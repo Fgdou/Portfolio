@@ -33,11 +33,12 @@ fn HeaderButton(props: &HeaderButtonProps) -> Html {
 #[function_component]
 fn Header() -> Html {
     let buttons = ["Home", "Experience", "Project", "Contact"];
-    let active = use_state(buttons[0].to_string());
+    let active = use_state(|| buttons[0]);
 
     let elements: Html = buttons.iter().map(|name| {
+        let active = active.clone();
         html! {
-            <HeaderButton {name} selected={*name == active} />
+            <HeaderButton {name} selected={*name == *active} callback={move |s| active.set(s)} />
         }
     }).collect();
 
