@@ -15,7 +15,10 @@ struct LogoListProps {
 #[function_component]
 fn Logo(props: &LogoProps) -> Html {
     html!{
-        <img class="logo" src={props.path} alt={props.name}/>
+        <div class="logo-container">
+            <img class="logo" src={props.path} alt={props.name}/>
+            <span class="text">{props.name}</span>
+        </div>
     }
 }
 
