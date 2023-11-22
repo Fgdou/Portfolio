@@ -2,13 +2,13 @@ use yew::prelude::*;
 
 #[derive(Properties, PartialEq)]
 struct LogoProps {
-    path: &'static str,
-    name: &'static str,
+    path: AttrValue,
+    name: AttrValue,
 }
 
 #[derive(Properties, PartialEq)]
 struct LogoListProps {
-    title: &'static str,
+    title: AttrValue,
     logos: Vec<LogoProps>,
 }
 
@@ -16,8 +16,8 @@ struct LogoListProps {
 fn Logo(props: &LogoProps) -> Html {
     html!{
         <div class="logo-container">
-            <img class="logo" src={props.path} alt={props.name}/>
-            <span class="text">{props.name}</span>
+            <img class="logo" src={props.path.clone()} alt={props.name.clone()}/>
+            <span class="text">{props.name.clone()}</span>
         </div>
     }
 }
@@ -27,13 +27,13 @@ fn LogoList(props: &LogoListProps) -> Html{
 
     let logos: Html = props.logos.iter().map(move |logo| {
         html!{
-            <Logo path={logo.path} name={logo.name} />
+            <Logo path={logo.path.clone()} name={logo.name.clone()} />
         }
     }).collect();
 
     html!{
         <div class="logo-list">
-            <h3>{props.title}</h3>
+            <h3>{props.title.clone()}</h3>
             <div>
                 {logos}
             </div>
@@ -45,43 +45,43 @@ fn LogoList(props: &LogoListProps) -> Html{
 pub fn Home() -> Html {
     let languages = vec!(
         LogoProps{
-            name: "Rust",
-            path: "/assets/img/rust.svg"
+            name: AttrValue::from("Rust"),
+            path: AttrValue::from("/assets/img/rust.svg")
         },
         LogoProps{
-            name: "C++",
-            path: "/assets/img/cpp.svg"
+            name: AttrValue::from("C++"),
+            path: AttrValue::from("/assets/img/cpp.svg")
         },
         LogoProps{
-            name: "Java",
-            path: "/assets/img/java.svg"
+            name: AttrValue::from("Java"),
+            path: AttrValue::from("/assets/img/java.svg")
         },
         LogoProps{
-            name: "Typescript",
-            path: "/assets/img/typescript.svg"
+            name: AttrValue::from("Typescript"),
+            path: AttrValue::from("/assets/img/typescript.svg")
         },
     );
 
     let technos = vec!(
         LogoProps{
-            name: "Linux",
-            path: "/assets/img/linux.svg"
+            name: AttrValue::from("Linux"),
+            path: AttrValue::from("/assets/img/linux.svg"),
         },
         LogoProps{
-            name: "NodeJS",
-            path: "/assets/img/nodejs.svg"
+            name: AttrValue::from("NodeJS"),
+            path: AttrValue::from("/assets/img/nodejs.svg"),
         },
         LogoProps{
-            name: "React",
-            path: "/assets/img/react.svg"
+            name: AttrValue::from("React"),
+            path: AttrValue::from("/assets/img/react.svg"),
         },
         LogoProps{
-            name: "Angular",
-            path: "/assets/img/angular.svg"
+            name: AttrValue::from("Angular"),
+            path: AttrValue::from("/assets/img/angular.svg"),
         },
         LogoProps{
-            name: "AWS",
-            path: "/assets/img/aws.svg"
+            name: AttrValue::from("AWS"),
+            path: AttrValue::from("/assets/img/aws.svg"),
         },
     );
 
