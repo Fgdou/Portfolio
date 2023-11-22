@@ -37,7 +37,7 @@
                 flex-wrap: wrap;
     
                 .logo {
-                    height: 100px;
+                    height: 50px;
                 }
 
                 .text {
@@ -61,11 +61,19 @@
     }
 }
 
+@media only screen and (min-width: 600px) {
+    .logo {
+        height: 100px !important;
+    }
+}
+
 @media only screen and (min-width: 1000px) {
     .home {
         grid-template-areas: "text picture";
         grid-template-columns: auto min-content;
         padding-top: 142px;
+
+        
 
         .profile-picture {
             margin: 0;
