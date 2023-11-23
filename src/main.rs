@@ -12,7 +12,7 @@ fn App() -> Html {
 
     let data = Data::default();
 
-    let experiences = Rc::from(data.experiences);
+    let experences = Rc::from(data.experiences);
 
     html! {
         <div>
