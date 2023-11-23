@@ -1,4 +1,9 @@
 header {
+    a {
+        color: inherit;
+        text-decoration: inherit;
+    }
+
     flex-wrap: wrap;
     justify-content: center;
     border-bottom: 1px solid gray;

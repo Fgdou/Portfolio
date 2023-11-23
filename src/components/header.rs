@@ -13,6 +13,7 @@ struct HeaderButtonProps {
 fn HeaderButton(props: &HeaderButtonProps) -> Html {
 
     let name = props.name.clone();
+    let lowercase = props.name.to_lowercase();
 
     let onclick = match props.callback.clone() {
         Some(callback) => {
@@ -24,9 +25,9 @@ fn HeaderButton(props: &HeaderButtonProps) -> Html {
     };
 
     html! {
-        <div {onclick} class={if props.selected {"header-btn active"} else {"header-btn"}}>
+        <a href={format!("#{lowercase}")} {onclick} class={if props.selected {"header-btn active"} else {"header-btn"}}>
             {props.name.clone()}
-        </div>
+        </a>
     }
 }
 

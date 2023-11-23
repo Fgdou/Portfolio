@@ -15,7 +15,7 @@ fn App() -> Html {
     let experiences = Rc::from(data.experiences);
 
     html! {
-        <div>
+        <div id="home">
             <Header/>
             <div class="container">
                 <Home ..data.home_props />
