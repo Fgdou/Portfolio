@@ -1,0 +1,68 @@
+.experiences {
+    .listing {
+        &>.elements {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 50px 0;
+            gap: 50px;
+        }
+
+        &>.icon-title {
+            display: inline-block;
+            position: relative;
+            padding-bottom: -10px;
+            font-size: 80px;
+            font-weight: 500;
+            img {
+                height: 65px;
+                margin-right: 16px;
+            }
+
+            &:after {
+                position: absolute;
+                bottom: 10px;
+                left: 0;
+                content: "";
+                background-color: gray;
+                width: 100%;
+                height: 2px;
+            }
+        }
+
+        .experience {
+            padding: 30px;
+            max-width: 400px;
+            border-radius: 50px;
+            box-shadow: 0px 38px 70px 0px rgba(0, 0, 0, 0.15);
+
+            &>img {
+                height: 55px;
+            }
+
+            .infos {
+                display: flex;
+                flex-wrap: wrap;
+                row-gap: 15px;
+                column-gap: 30px;
+
+                .icon-title {
+                    display: flex;
+                    align-items: center;
+    
+                    img {
+                        height: 25px;
+                        margin-right: 10px;
+                    }
+                    font-size: 15px;
+                    font-weight: 500;
+                    text-align: center;
+                }
+            }
+
+            .split {
+                display: grid;
+                grid-template-columns: 50% 50%;
+            }
+        }
+    }
+}

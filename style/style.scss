@@ -1,4 +1,4 @@
-@import 'header', 'home';
+@import 'header', 'home','experience';
 
 @font-face {
     font-family: 'Roboto Mono';
@@ -20,4 +20,14 @@ h1, h2, h3 {
     max-width: 1000px;
     margin: auto;
     padding: 20px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 150px;
+}
+
+@media only screen and (min-width: 600px) {
+    .container {
+        padding-top: 150px;
+    }
 }
