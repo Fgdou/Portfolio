@@ -31,15 +31,24 @@ fn HeaderButton(props: &HeaderButtonProps) -> Html {
     }
 }
 
+#[derive(Properties, PartialEq)]
+pub struct HeaderProps {
+    pub page: UseStateHandle<AttrValue>
+}
+
 #[function_component]
-pub fn Header() -> Html {
+pub fn Header(props: &HeaderProps) -> Html {
     let buttons = [
         AttrValue::from("Home"), 
         AttrValue::from("Experience"),
         AttrValue::from("Project"),
         AttrValue::from("Contact")
         ];
-    let active = use_state(|| buttons[0].clone());
+    let active = props.page.clone();
+
+    if !buttons.contains(&active) {
+        active.set(buttons[0].clone());
+    };
 
     let elements: Html = buttons.iter().map(|name| {
         let active = active.clone();

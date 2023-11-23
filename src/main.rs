@@ -10,16 +10,24 @@ use data::*;
 #[function_component]
 fn App() -> Html {
 
+    let page = use_state(|| AttrValue::from("home"));
+
     let data = Data::default();
 
     let experiences = Rc::from(data.experiences);
 
     html! {
         <div id="home">
-            <Header/>
+            <Header page={page.clone()} />
             <div class="container">
-                <Home ..data.home_props />
-                <Experience data={experiences} />
+                <div onmouseenter={
+                    let page = page.clone();
+                    move |_| page.set(AttrValue::from("Home"))
+                }><Home ..data.home_props /></div>
+                <div onmouseenter={
+                    let page = page.clone();
+                    move |_| page.set(AttrValue::from("Experience"))
+                }><Experience data={experiences} /></div>
             </div>
         </div>
     }
