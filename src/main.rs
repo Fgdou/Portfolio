@@ -15,19 +15,19 @@ fn App() -> Html {
                     logos: vec!(
                         LogoProps{
                             name: AttrValue::from("Rust"),
-                            path: AttrValue::from("/assets/img/rust.svg")
+                            path: AttrValue::from("assets/img/rust.svg")
                         },
                         LogoProps{
                             name: AttrValue::from("C++"),
-                            path: AttrValue::from("/assets/img/cpp.svg")
+                            path: AttrValue::from("assets/img/cpp.svg")
                         },
                         LogoProps{
                             name: AttrValue::from("Java"),
-                            path: AttrValue::from("/assets/img/java.svg")
+                            path: AttrValue::from("assets/img/java.svg")
                         },
                         LogoProps{
                             name: AttrValue::from("Typescript"),
-                            path: AttrValue::from("/assets/img/typescript.svg")
+                            path: AttrValue::from("assets/img/typescript.svg")
                         },
                     ),
                     title: AttrValue::from("Languages")
@@ -36,23 +36,23 @@ fn App() -> Html {
                     logos: vec!(
                         LogoProps{
                             name: AttrValue::from("Linux"),
-                            path: AttrValue::from("/assets/img/linux.svg"),
+                            path: AttrValue::from("assets/img/linux.svg"),
                         },
                         LogoProps{
                             name: AttrValue::from("NodeJS"),
-                            path: AttrValue::from("/assets/img/nodejs.svg"),
+                            path: AttrValue::from("assets/img/nodejs.svg"),
                         },
                         LogoProps{
                             name: AttrValue::from("React"),
-                            path: AttrValue::from("/assets/img/react.svg"),
+                            path: AttrValue::from("assets/img/react.svg"),
                         },
                         LogoProps{
                             name: AttrValue::from("Angular"),
-                            path: AttrValue::from("/assets/img/angular.svg"),
+                            path: AttrValue::from("assets/img/angular.svg"),
                         },
                         LogoProps{
                             name: AttrValue::from("AWS"),
-                            path: AttrValue::from("/assets/img/aws.svg"),
+                            path: AttrValue::from("assets/img/aws.svg"),
                         },
                     ),
                     title: AttrValue::from("Techologies")

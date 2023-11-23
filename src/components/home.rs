@@ -67,7 +67,7 @@ pub fn Home(props: &HomeProps) -> Html {
                 </div>
                 {lists}
             </div>
-            <img class="profile-picture" src="/assets/img/profile.jpeg"/>
+            <img class="profile-picture" src="assets/img/profile.jpeg"/>
         </div>
     }
 }
