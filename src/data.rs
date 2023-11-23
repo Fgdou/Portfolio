@@ -74,10 +74,27 @@ impl Default for Data {
                         location: AttrValue::from("Cambridge, UK"),
                         skills: ["AI", "Python", "HuggingFace", "AWS"].into_iter().map(AttrValue::from).collect(),
                         softskills: ["Team Work", "SCRUM", "Communication"].into_iter().map(AttrValue::from).collect(),
-                    })
+                    }),
+                    Rc::from(ExperienceSingleData{
+                        image: AttrValue::from("assets/img/uiris.png"),
+                        role: AttrValue::from("Software Developer Intern"),
+                        start: AttrValue::from("June 2022"),
+                        duration: AttrValue::from("3 Months"),
+                        location: AttrValue::from("Carquefou, FR"),
+                        skills: ["Java Springboot", "Jenkins", "VueJS", "SQL"].into_iter().map(AttrValue::from).collect(),
+                        softskills: ["Micro Services", "Team Work", "Stand-ip"].into_iter().map(AttrValue::from).collect(),
+                    }),
                 ),
                 schools: vec!(
-        
+                    Rc::from(ExperienceSingleData{
+                        image: AttrValue::from("assets/img/esir.png"),
+                        role: AttrValue::from("Software Engineer Master"),
+                        start: AttrValue::from("Sept. 2019"),
+                        duration: AttrValue::from("5 Years"),
+                        location: AttrValue::from("Rennes, FR"),
+                        skills: ["Java", "C", "DevOps"].into_iter().map(AttrValue::from).collect(),
+                        softskills: ["Engineering", "Communication", "Soft-Skills"].into_iter().map(AttrValue::from).collect(),
+                    }),
                 )
             }
         }
