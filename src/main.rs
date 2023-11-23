@@ -65,7 +65,15 @@ fn App() -> Html {
 
     let experiences = Rc::from(ExperienceData{
         jobs: vec!(
-
+            Rc::from(ExperienceSingleData{
+                image: AttrValue::from("assets/img/amazon.svg"),
+                role: AttrValue::from("Software Developer Engineer"),
+                start: AttrValue::from("June 2023"),
+                duration: AttrValue::from("4 Months"),
+                location: AttrValue::from("Cambridge, UK"),
+                skills: ["AI", "Python", "HuggingFace", "AWS"].into_iter().map(AttrValue::from).collect(),
+                softskills: ["Team Work", "SCRUM", "Communication"].into_iter().map(AttrValue::from).collect(),
+            })
         ),
         schools: vec!(
 
