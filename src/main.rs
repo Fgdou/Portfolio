@@ -5,47 +5,6 @@ use crate::components::{Header, Home, LogoProps, HomeProps, LogoListProps};
 
 #[function_component]
 fn App() -> Html {
-    let languages = vec!(
-        LogoProps{
-            name: AttrValue::from("Rust"),
-            path: AttrValue::from("/assets/img/rust.svg")
-        },
-        LogoProps{
-            name: AttrValue::from("C++"),
-            path: AttrValue::from("/assets/img/cpp.svg")
-        },
-        LogoProps{
-            name: AttrValue::from("Java"),
-            path: AttrValue::from("/assets/img/java.svg")
-        },
-        LogoProps{
-            name: AttrValue::from("Typescript"),
-            path: AttrValue::from("/assets/img/typescript.svg")
-        },
-    );
-
-    let technos = vec!(
-        LogoProps{
-            name: AttrValue::from("Linux"),
-            path: AttrValue::from("/assets/img/linux.svg"),
-        },
-        LogoProps{
-            name: AttrValue::from("NodeJS"),
-            path: AttrValue::from("/assets/img/nodejs.svg"),
-        },
-        LogoProps{
-            name: AttrValue::from("React"),
-            path: AttrValue::from("/assets/img/react.svg"),
-        },
-        LogoProps{
-            name: AttrValue::from("Angular"),
-            path: AttrValue::from("/assets/img/angular.svg"),
-        },
-        LogoProps{
-            name: AttrValue::from("AWS"),
-            path: AttrValue::from("/assets/img/aws.svg"),
-        },
-    );
 
     let root = props!(
         HomeProps{
@@ -53,11 +12,49 @@ fn App() -> Html {
             name: AttrValue::from("Fabien GOARDOU"),
             logo_list: vec!(
                 LogoListProps{
-                    logos: languages,
+                    logos: vec!(
+                        LogoProps{
+                            name: AttrValue::from("Rust"),
+                            path: AttrValue::from("/assets/img/rust.svg")
+                        },
+                        LogoProps{
+                            name: AttrValue::from("C++"),
+                            path: AttrValue::from("/assets/img/cpp.svg")
+                        },
+                        LogoProps{
+                            name: AttrValue::from("Java"),
+                            path: AttrValue::from("/assets/img/java.svg")
+                        },
+                        LogoProps{
+                            name: AttrValue::from("Typescript"),
+                            path: AttrValue::from("/assets/img/typescript.svg")
+                        },
+                    ),
                     title: AttrValue::from("Languages")
                 },
                 LogoListProps{
-                    logos: technos,
+                    logos: vec!(
+                        LogoProps{
+                            name: AttrValue::from("Linux"),
+                            path: AttrValue::from("/assets/img/linux.svg"),
+                        },
+                        LogoProps{
+                            name: AttrValue::from("NodeJS"),
+                            path: AttrValue::from("/assets/img/nodejs.svg"),
+                        },
+                        LogoProps{
+                            name: AttrValue::from("React"),
+                            path: AttrValue::from("/assets/img/react.svg"),
+                        },
+                        LogoProps{
+                            name: AttrValue::from("Angular"),
+                            path: AttrValue::from("/assets/img/angular.svg"),
+                        },
+                        LogoProps{
+                            name: AttrValue::from("AWS"),
+                            path: AttrValue::from("/assets/img/aws.svg"),
+                        },
+                    ),
                     title: AttrValue::from("Techologies")
                 },
             )

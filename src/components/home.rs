@@ -1,12 +1,12 @@
 use yew::prelude::*;
 
-#[derive(Properties, PartialEq)]
+#[derive(Properties, PartialEq, Clone)]
 pub struct LogoProps {
     pub path: AttrValue,
     pub name: AttrValue,
 }
 
-#[derive(Properties, PartialEq)]
+#[derive(Properties, PartialEq, Clone)]
 pub struct LogoListProps {
     pub title: AttrValue,
     pub logos: Vec<LogoProps>,
@@ -52,7 +52,7 @@ pub struct HomeProps {
 #[function_component]
 pub fn Home(props: &HomeProps) -> Html {
 
-    let lists: Html = props.logo_list.iter().map(move |l| {
+    let lists: Html = props.logo_list.clone().into_iter().map(move |l| {
         html! {
             <LogoList title={l.title.clone()} logos={l.logos} />
         }
