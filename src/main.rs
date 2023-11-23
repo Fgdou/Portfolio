@@ -20,11 +20,11 @@ fn App() -> Html {
         <div id="home">
             <Header page={page.clone()} />
             <div class="container">
-                <div onmouseenter={
+                <div id={"Home"} onmouseenter={
                     let page = page.clone();
                     move |_| page.set(AttrValue::from("Home"))
                 }><Home ..data.home_props /></div>
-                <div onmouseenter={
+                <div id={"Experience"} onmouseenter={
                     let page = page.clone();
                     move |_| page.set(AttrValue::from("Experience"))
                 }><Experience data={experiences} /></div>

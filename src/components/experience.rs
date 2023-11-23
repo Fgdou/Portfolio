@@ -106,7 +106,7 @@ fn Listing(props: &ListingProps) -> Html {
 #[function_component]
 pub fn Experience(props: &ExperienceProps) -> Html{
     html!{
-        <div class="experiences" id="experience">
+        <div class="experiences">
             <Listing name="Jobs" icon="assets/img/job.svg" list={props.data.jobs.clone()} />
             <Listing name="School" icon="assets/img/school.svg" list={props.data.schools.clone()} />
         </div>

@@ -17,17 +17,15 @@ h1, h2, h3 {
 }
 
 .container {
+    &>div {
+        padding-top: 150px;
+    }
+
     max-width: 1000px;
     margin: auto;
     padding: 20px;
 
     display: flex;
     flex-direction: column;
-    gap: 150px;
-}
-
-@media only screen and (min-width: 600px) {
-    .container {
-        padding-top: 150px;
-    }
+    gap: 100px;
 }
