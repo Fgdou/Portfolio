@@ -1,0 +1,20 @@
+version: '3'
+services:
+  front-dev:
+    build: 
+      dockerfile: Dockerfile.dev
+    ports:
+      - 80:8080
+    volumes:
+      - ./src:/app/src
+      - ./assets:/app/assets
+      - ./style:/app/style
+      - ./Cargo.toml:/app/Cargo.toml
+      - ./Cargo.lock:/app/Cargo.lock
+      - ./index.html:/app/index.html
+      - build-data:/app/target
+      - dist-data:/app/dist
+
+volumes:
+  build-data:
+  dist-data:

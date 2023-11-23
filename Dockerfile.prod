@@ -1,0 +1,26 @@
+FROM rust as builder
+
+RUN rustup target add wasm32-unknown-unknown
+RUN cargo install --locked trunk
+
+RUN cd / && cargo new app && cd app
+
+WORKDIR /app
+
+COPY Cargo.toml Cargo.lock ./
+RUN cargo build --release
+
+COPY index.html .
+COPY assets ./assets
+COPY style ./style
+COPY src ./src
+
+RUN trunk build --release
+
+
+FROM nginx as prod
+
+EXPOSE 80
+
+COPY nginx.conf /etc/nginx/conf.d/default.conf
+COPY --from=builder /app/dist/ /usr/share/nginx/html
