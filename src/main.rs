@@ -1,7 +1,9 @@
 mod components;
+use std::rc::Rc;
+
 use yew::{prelude::*, props};
 
-use crate::components::{Header, Home, LogoProps, HomeProps, LogoListProps};
+use crate::components::*;
 
 #[function_component]
 fn App() -> Html {
@@ -61,10 +63,20 @@ fn App() -> Html {
         }
     );
 
+    let experiences = Rc::from(ExperienceData{
+        jobs: vec!(
+
+        ),
+        schools: vec!(
+
+        )
+    });
+
     html! {
         <div>
             <Header/>
             <Home ..root />
+            <Experience data={experiences} />
         </div>
     }
 }
