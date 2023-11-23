@@ -1,26 +1,29 @@
 .experiences {
     .listing {
+        text-align: center;
         &>.elements {
             display: flex;
             flex-wrap: wrap;
             margin: 50px 0;
             gap: 50px;
+            justify-content: center;
         }
 
         &>.icon-title {
-            display: inline-block;
+            display: inline-flex;
             position: relative;
             padding-bottom: -10px;
-            font-size: 80px;
+            font-size: 40px;
             font-weight: 500;
+            align-items: center;
             img {
-                height: 65px;
+                height: 45px;
                 margin-right: 16px;
             }
 
             &:after {
                 position: absolute;
-                bottom: 10px;
+                bottom: 5px;
                 left: 0;
                 content: "";
                 background-color: gray;
@@ -62,6 +65,24 @@
             .split {
                 display: grid;
                 grid-template-columns: 50% 50%;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+    .experiences {
+        .listing {
+            text-align: left;
+            &>.icon-title {
+                font-size: 80px;
+                img {
+                    height: 65px;
+                }
+            }
+
+            &>.elements {
+                justify-content: left;
             }
         }
     }
