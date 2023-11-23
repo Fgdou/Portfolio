@@ -59,7 +59,7 @@ pub fn Home(props: &HomeProps) -> Html {
     }).collect();
 
     html! {
-        <div class="home container">
+        <div class="home">
             <div class="text">
                 <div class="title">
                     <h1>{props.name.clone()}</h1>

@@ -53,10 +53,10 @@ fn ExperienceSingle(props: &ExperienceSingleProps) -> Html {
         <div class="experience">
             <img src={props.data.image.clone()} />
             <div class="infos">
-                <IconTitle title={props.data.role.clone()} icon="" />
-                <IconTitle title={props.data.start.clone()} icon="" />
-                <IconTitle title={props.data.duration.clone()} icon="" />
-                <IconTitle title={props.data.location.clone()} icon="" />
+                <IconTitle title={props.data.role.clone()} icon="assets/img/role.svg" />
+                <IconTitle title={props.data.start.clone()} icon="assets/img/calendar.svg" />
+                <IconTitle title={props.data.duration.clone()} icon="assets/img/time.svg" />
+                <IconTitle title={props.data.location.clone()} icon="assets/img/location.svg" />
             </div>
             <div class="split">
                 <SkillsList list={props.data.skills.clone()} />
@@ -98,7 +98,7 @@ fn Listing(props: &ListingProps) -> Html {
     html!{
         <div class="listing">
             <IconTitle title={props.name.clone()} icon={props.icon.clone()} />
-            {elements}
+            <div class="elements">{elements}</div>
         </div>  
     }
 }
@@ -106,9 +106,9 @@ fn Listing(props: &ListingProps) -> Html {
 #[function_component]
 pub fn Experience(props: &ExperienceProps) -> Html{
     html!{
-        <div class="experience">
-            <Listing name="Jobs" icon="" list={props.data.jobs.clone()} />
-            <Listing name="School" icon="" list={props.data.schools.clone()} />
+        <div class="experiences">
+            <Listing name="Jobs" icon="assets/img/job.svg" list={props.data.jobs.clone()} />
+            <Listing name="School" icon="assets/img/school.svg" list={props.data.schools.clone()} />
         </div>
     }
 }

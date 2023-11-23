@@ -17,8 +17,10 @@ fn App() -> Html {
     html! {
         <div>
             <Header/>
-            <Home ..data.home_props />
-            <Experience data={experiences} />
+            <div class="container">
+                <Home ..data.home_props />
+                <Experience data={experiences} />
+            </div>
         </div>
     }
 }
