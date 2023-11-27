@@ -6,7 +6,8 @@ use crate::components::*;
 
 pub struct Data {
     pub home_props: HomeProps,
-    pub experiences: ExperienceData
+    pub experiences: ExperienceData,
+    pub projects: Vec<ProjectData>,
 }
 
 impl Default for Data {
@@ -140,7 +141,37 @@ impl Default for Data {
                         link: AttrValue::from("https://www.linkedin.com/posts/esir-univ-rennes_la-battledev-de-thales-a-eu-lieu-mardi-dernier-activity-7119350861679443968-2uAt?utm_source=share&utm_medium=member_desktop"),
                     }),
                 )
-            }
+            },
+            projects: vec!(
+                ProjectData{
+                    name: AttrValue::from("GameOfLife"),
+                    github_link: Some(AttrValue::from("https://github.com/Fgdou/GameOfLife")),
+                    demo_link: None,
+                    description: AttrValue::from("This project is coded in C++ just using the terminal for output. It uses the ANSI escape codes for moving the cursor around."),
+                    image: AttrValue::from("assets/img/projects/gameoflife.gif")
+                },
+                ProjectData{
+                    name: AttrValue::from("AdventureGame"),
+                    github_link: Some(AttrValue::from("https://github.com/Fgdou/ProjProg2022")),
+                    demo_link: None,
+                    description: AttrValue::from("During this 30 hour project, we built from scratch a game on the adventure theme. The goal was to propose a playable game in not much time, but working with a list of requirement. There are no libraries or code except the SDL2."),
+                    image: AttrValue::from("assets/img/projects/adventuregame.png")
+                },
+                ProjectData{
+                    name: AttrValue::from("MandelbrotJS"),
+                    github_link: Some(AttrValue::from("https://github.com/Fgdou/Mandelbrot_js")),
+                    demo_link: Some(AttrValue::from("https://fgdou.ovh/Mandelbrot/")),
+                    description: AttrValue::from("This is a simple project in javascript. In can be seen on desktop or mobile."),
+                    image: AttrValue::from("assets/img/projects/mandelbrot.gif")
+                },
+                ProjectData{
+                    name: AttrValue::from("Tower Defence"),
+                    github_link: Some(AttrValue::from("https://github.com/Fgdou/Warcraft_V2")),
+                    demo_link: None,
+                    description: AttrValue::from("This is a java school project, with the StdDraw library for the GUI."),
+                    image: AttrValue::from("assets/img/projects/warcraft.gif")
+                },
+            )
         }
     }
 }
