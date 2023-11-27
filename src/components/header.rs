@@ -41,7 +41,7 @@ pub fn Header(props: &HeaderProps) -> Html {
     let buttons = [
         AttrValue::from("Home"), 
         AttrValue::from("Experience"),
-        AttrValue::from("Project"),
+        AttrValue::from("Projects"),
         AttrValue::from("Contact")
         ];
     let active = props.page.clone();
