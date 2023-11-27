@@ -121,6 +121,24 @@ impl Default for Data {
                         image: AttrValue::from("assets/img/Discover_Support_for_IaaS_Products.png"),
                         text: AttrValue::from("")
                     }),
+                ),
+                contests: vec!(
+                    Rc::from(ContestData{
+                        name: AttrValue::from("SWERC"),
+                        link: AttrValue::from("https://swerc.eu"),
+                    }),
+                    Rc::from(ContestData{
+                        name: AttrValue::from("AdventOfCode"),
+                        link: AttrValue::from("https://adventofcode.com/"),
+                    }),
+                    Rc::from(ContestData{
+                        name: AttrValue::from("BreakTheCode"),
+                        link: AttrValue::from("https://jobs.soprasteria.com/details/2023/11/23/default-calendar/break-the-code---edition-ille-et-vilaine-morbihan"),
+                    }),
+                    Rc::from(ContestData{
+                        name: AttrValue::from("BattleDev"),
+                        link: AttrValue::from("https://www.linkedin.com/posts/esir-univ-rennes_la-battledev-de-thales-a-eu-lieu-mardi-dernier-activity-7119350861679443968-2uAt?utm_source=share&utm_medium=member_desktop"),
+                    }),
                 )
             }
         }
