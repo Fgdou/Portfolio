@@ -85,6 +85,20 @@
                 }
             }
         }
+
+        .contests {
+            display: flex;
+            padding-top: 30px;
+            column-gap: 100px;
+            flex-wrap: wrap;
+            justify-content: center;
+
+            a {
+                color: inherit;
+                font-size: 40px;
+                text-decoration: inherit;
+            }
+        }
     }
 }
 
@@ -99,7 +113,7 @@
                 }
             }
 
-            &>.elements, .certifs {
+            &>.elements, .certifs, .contests {
                 justify-content: left;
             }
         }
