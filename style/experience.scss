@@ -1,4 +1,7 @@
 .experiences {
+    display: flex;
+    gap: 100px;
+    flex-direction: column;
     .listing {
         text-align: center;
         &>.elements {
@@ -76,7 +79,7 @@
             justify-content: center;
 
             a {
-                
+
                 img {
                     height: 100px;
                 }
