@@ -1,4 +1,7 @@
 .experiences {
+    display: flex;
+    gap: 100px;
+    flex-direction: column;
     .listing {
         text-align: center;
         &>.elements {
@@ -67,6 +70,21 @@
                 grid-template-columns: 50% 50%;
             }
         }
+
+        .certifs {
+            display: flex;
+            padding-top: 50px;
+            gap: 50px;
+            flex-wrap: wrap;
+            justify-content: center;
+
+            a {
+
+                img {
+                    height: 100px;
+                }
+            }
+        }
     }
 }
 
@@ -81,7 +99,7 @@
                 }
             }
 
-            &>.elements {
+            &>.elements, .certifs {
                 justify-content: left;
             }
         }

@@ -95,6 +95,32 @@ impl Default for Data {
                         skills: ["Java", "C", "DevOps"].into_iter().map(AttrValue::from).collect(),
                         softskills: ["Engineering", "Communication", "Soft-Skills"].into_iter().map(AttrValue::from).collect(),
                     }),
+                ),
+                certifs: vec!(
+                    Rc::from(CertificationData{
+                        name: AttrValue::from("TOEIC"),
+                        url: AttrValue::from("https://www.etsglobal.org"),
+                        image: AttrValue::from("assets/img/TOEIC.png"),
+                        text: AttrValue::from("C1 980")
+                    }),
+                    Rc::from(CertificationData{
+                        name: AttrValue::from("CLES"),
+                        url: AttrValue::from("https://www.certification-cles.fr/"),
+                        image: AttrValue::from("assets/img/CLES.png"),
+                        text: AttrValue::from("B2")
+                    }),
+                    Rc::from(CertificationData{
+                        name: AttrValue::from("OVHcloud Discover IaaS"),
+                        url: AttrValue::from("https://partner.ovhcloud.training/badges/badge.php?hash=d5304a253dc3b4f08f0b147899eab9eb699e7653"),
+                        image: AttrValue::from("assets/img/Discover_IaaS_Products.png"),
+                        text: AttrValue::from("")
+                    }),
+                    Rc::from(CertificationData{
+                        name: AttrValue::from("OVHcloud Discover Support IaaS"),
+                        url: AttrValue::from("https://partner.ovhcloud.training/badges/badge.php?hash=b94fe1bae4c4014a2acc1fa69372c3c4c64bf2da"),
+                        image: AttrValue::from("assets/img/Discover_Support_for_IaaS_Products.png"),
+                        text: AttrValue::from("")
+                    }),
                 )
             }
         }
