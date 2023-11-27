@@ -18,6 +18,13 @@ pub struct ExperienceData {
     pub jobs: Vec<Rc<ExperienceSingleData>>,
     pub schools: Vec<Rc<ExperienceSingleData>>,
     pub certifs: Vec<Rc<CertificationData>>,
+    pub contests: Vec<Rc<ContestData>>,
+}
+
+#[derive(PartialEq)]
+pub struct ContestData {
+    pub name: AttrValue,
+    pub link: AttrValue,
 }
 
 #[derive(PartialEq)]
@@ -136,6 +143,30 @@ fn Certifications(props: &CertificationProps) -> Html {
     }
 }
 
+#[derive(Properties, PartialEq)]
+struct ContestsProps {
+    data: Vec<Rc<ContestData>>
+}
+
+#[function_component]
+fn Contests(props: &ContestsProps) -> Html {
+    let elements: Html = props.data.clone().into_iter().map(|c| html!{
+        html!{
+            <a href={c.link.clone()}>{c.name.clone()}</a>
+        }
+    }).collect();
+
+    html!{
+        <div class="listing">
+            <IconTitle title={"Contests"} icon={"assets/img/podium.svg"} />
+            <div class="contests">
+                {elements}
+            </div>
+        </div>
+    }
+}
+
+
 #[function_component]
 pub fn Experience(props: &ExperienceProps) -> Html{
     html!{
@@ -143,6 +174,7 @@ pub fn Experience(props: &ExperienceProps) -> Html{
             <Listing name="Jobs" icon="assets/img/job.svg" list={props.data.jobs.clone()} />
             <Listing name="School" icon="assets/img/school.svg" list={props.data.schools.clone()} />
             <Certifications data={props.data.certifs.clone()} />
+            <Contests data={props.data.contests.clone()} />
         </div>
     }
 }
