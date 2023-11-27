@@ -6,7 +6,8 @@ use crate::components::*;
 
 pub struct Data {
     pub home_props: HomeProps,
-    pub experiences: ExperienceData
+    pub experiences: ExperienceData,
+    pub projects: Vec<ProjectData>,
 }
 
 impl Default for Data {
@@ -122,7 +123,16 @@ impl Default for Data {
                         text: AttrValue::from("")
                     }),
                 )
-            }
+            },
+            projects: vec!(
+                ProjectData{
+                    name: AttrValue::from("GameOfLife"),
+                    github_link: Some(AttrValue::from("https://github.com/Fgdou/GameOfLife")),
+                    demo_link: None,
+                    description: AttrValue::from("This project is coded in C++ just using the terminal for output. It uses the ANSI escape codes for moving the cursor around."),
+                    image: AttrValue::from("assets/img/projects/gameoflife.gif")
+                }
+            )
         }
     }
 }

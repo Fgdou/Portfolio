@@ -1,0 +1,47 @@
+.projects {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+
+    .project {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        align-items: center;
+        column-gap: 100px;
+
+        &>img {
+            width: 400px;
+            height: 250px;
+            border-radius: 50px;
+            object-fit: cover;
+        }
+
+        .text {
+            max-width: 400px;
+            .title {
+                font-weight: 700;
+                font-size: 40px;
+
+                display: flex;
+
+                align-items: center;
+                
+                justify-content: space-between;
+
+                img {
+                    height: 40px;
+                    opacity: 50%;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+    .projects {
+        .project {
+            justify-content: space-between;
+        }
+    }
+}

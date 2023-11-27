@@ -15,6 +15,7 @@ fn App() -> Html {
     let data = Data::default();
 
     let experiences = Rc::from(data.experiences);
+    let projects = Rc::from(data.projects);
 
     html! {
         <div id="home">
@@ -31,7 +32,7 @@ fn App() -> Html {
                 <div id={"Projects"} onmouseenter={
                     let page = page.clone();
                     move |_| page.set(AttrValue::from("Projects"))
-                }><Projects /></div>
+                }><Projects data={projects} /></div>
             </div>
         </div>
     }
