@@ -1,7 +1,7 @@
 .projects {
     display: flex;
     flex-direction: column;
-    gap: 50px;
+    gap: 100px;
 
     .project {
         display: flex;
@@ -15,6 +15,8 @@
             height: 250px;
             border-radius: 50px;
             object-fit: cover;
+            background-color: gray;
+            box-shadow: 0px 30px 61px 0px rgba(0, 0, 0, 0.25);
         }
 
         .text {
@@ -29,9 +31,18 @@
                 
                 justify-content: space-between;
 
+                &>span:nth-child(2) {
+                    display: flex;
+                }
+
                 img {
                     height: 40px;
                     opacity: 50%;
+                }
+
+                a {
+                    height: 40px;
+                    display: block;
                 }
             }
         }
