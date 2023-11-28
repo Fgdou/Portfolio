@@ -33,7 +33,7 @@ pub fn Projects(props: &ProjectsProps) -> Html {
         };
 
         let imageLink = match (&d.github_link, &d.demo_link) {
-            (_, Some(link)) | (Some(link), None) => html!{<a href={link.clone()}>{image}</a>},
+            (_, Some(link)) | (Some(link), None) => html!{<a target="_blank" href={link.clone()}>{image}</a>},
             _ => {image}
         };
 

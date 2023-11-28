@@ -161,7 +161,7 @@ impl Default for Data {
                 ProjectData{
                     name: AttrValue::from("MandelbrotJS"),
                     github_link: Some(AttrValue::from("https://github.com/Fgdou/Mandelbrot_js")),
-                    demo_link: Some(AttrValue::from("https://fgdou.ovh/Mandelbrot/")),
+                    demo_link: Some(AttrValue::from("https://fgdou.github.io/Mandelbrot_js/")),
                     description: AttrValue::from("This is a simple project in javascript. In can be seen on desktop or mobile."),
                     image: AttrValue::from("assets/img/projects/mandelbrot.gif")
                 },
