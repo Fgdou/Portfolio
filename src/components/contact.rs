@@ -40,8 +40,8 @@ pub fn Contact(props: &ContactProps) -> Html {
                 <div class="header">{"Contact"}</div>
             <Icon icon={"assets/img/email.svg"} text={props.data.email.clone()} url={format!("mailto:{}", props.data.email)} />
             <Icon icon={"assets/img/linkedin.svg"} text={props.data.linkedin.clone()} url={props.data.linkedin.clone()} />
-            <Icon icon={"assets/img/github.svg"} text={props.data.github.clone()} url={format!("mailto:{}", props.data.github.clone())} />
-            <Icon icon={"assets/img/insta.svg"} text={props.data.instagram.clone()} url={format!("mailto:{}", props.data.instagram.clone())} />
+            <Icon icon={"assets/img/github.svg"} text={props.data.github.clone()} url={props.data.github.clone()} />
+            <Icon icon={"assets/img/insta.svg"} text={props.data.instagram.clone()} url={props.data.instagram.clone()} />
             </div>
         </div>
     }
