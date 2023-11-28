@@ -28,6 +28,15 @@ pub fn Projects(props: &ProjectsProps) -> Html {
             None => html!{}
         };
 
+        let image = html! {
+            <img class="imagePres" src={d.image.clone()} alt={d.name.clone()} />
+        };
+
+        let imageLink = match (&d.github_link, &d.demo_link) {
+            (_, Some(link)) | (Some(link), None) => html!{<a href={link.clone()}>{image}</a>},
+            _ => {image}
+        };
+
         html!{
             <div class="project">
                 <div class="text">
@@ -40,7 +49,7 @@ pub fn Projects(props: &ProjectsProps) -> Html {
                     </div>
                     <p class="description">{d.description.clone()}</p>
                 </div>
-                <img src={d.image.clone()} alt={d.name.clone()} />
+                {imageLink}
             </div>
         }
     }).collect();
