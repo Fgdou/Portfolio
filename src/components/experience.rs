@@ -129,7 +129,7 @@ fn Certifications(props: &CertificationProps) -> Html {
 
     let elements: Html = props.data.clone().into_iter().map(|c| {
         html!{
-            <a href={c.url.clone()} target="_blank"><img alt={c.name.clone()} src={c.image.clone()} /></a>
+            <a class="animate" href={c.url.clone()} target="_blank"><img alt={c.name.clone()} src={c.image.clone()} /></a>
         }
     }).collect();
 
@@ -152,7 +152,7 @@ struct ContestsProps {
 fn Contests(props: &ContestsProps) -> Html {
     let elements: Html = props.data.clone().into_iter().map(|c| html!{
         html!{
-            <a href={c.link.clone()}>{c.name.clone()}</a>
+            <a class="animate" href={c.link.clone()}>{c.name.clone()}</a>
         }
     }).collect();
 

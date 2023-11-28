@@ -20,16 +20,16 @@ pub struct ProjectsProps {
 pub fn Projects(props: &ProjectsProps) -> Html {
     let elements: Html = props.data.iter().map(|d| {
         let github: Html = match &d.github_link {
-            Some(link) => html!{<a target="_blank" href={link.clone()}><img src="assets/img/github.svg"/></a>},
+            Some(link) => html!{<a target="_blank" href={link.clone()}><img class="animate" src="assets/img/github.svg"/></a>},
             None => html!{}
         };
         let link: Html = match &d.demo_link {
-            Some(link) => html!{<a target="_blank" href={link.clone()}><img src="assets/img/link.svg"/></a>},
+            Some(link) => html!{<a target="_blank" href={link.clone()}><img class="animate" src="assets/img/link.svg"/></a>},
             None => html!{}
         };
 
         let image = html! {
-            <img class="imagePres" src={d.image.clone()} alt={d.name.clone()} />
+            <img class="imagePres animate" src={d.image.clone()} alt={d.name.clone()} />
         };
 
         let imageLink = match (&d.github_link, &d.demo_link) {

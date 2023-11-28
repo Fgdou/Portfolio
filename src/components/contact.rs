@@ -11,7 +11,7 @@ pub struct IconProps {
 fn Icon(props: &IconProps) -> Html {
     html!{
         <div class="icon">
-            <a target="_blank" href={props.url.clone()}>
+            <a class="animate" target="_blank" href={props.url.clone()}>
                 <img src={props.icon.clone()}/>
                 <span>{props.text.trim_start_matches("https://www.")}</span>
             </a>
