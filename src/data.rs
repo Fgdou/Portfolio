@@ -8,6 +8,7 @@ pub struct Data {
     pub home_props: HomeProps,
     pub experiences: ExperienceData,
     pub projects: Vec<ProjectData>,
+    pub contact: ContactData,
 }
 
 impl Default for Data {
@@ -171,7 +172,13 @@ impl Default for Data {
                     description: AttrValue::from("This is a java school project, with the StdDraw library for the GUI."),
                     image: AttrValue::from("assets/img/projects/warcraft.gif")
                 },
-            )
+            ),
+            contact: ContactData { 
+                email: AttrValue::from("fabigoardou@gmail.com"), 
+                linkedin: AttrValue::from("https://www.linkedin.com/in/fgdou/"), 
+                github: AttrValue::from("https://www.github.com/Fgdou"), 
+                instagram: AttrValue::from("https://www.instagram.com/Fgdou/"), 
+            }
         }
     }
 }

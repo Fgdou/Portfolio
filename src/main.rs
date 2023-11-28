@@ -33,6 +33,10 @@ fn App() -> Html {
                     let page = page.clone();
                     move |_| page.set(AttrValue::from("Projects"))
                 }><Projects data={projects} /></div>
+                <div id={"Contact"} onmouseenter={
+                    let page = page.clone();
+                    move |_| page.set(AttrValue::from("Contact"))
+                }><Contact data={data.contact} /></div>
             </div>
         </div>
     }
