@@ -48,6 +48,7 @@
             .infos {
                 display: flex;
                 flex-wrap: wrap;
+                justify-content: center;
                 row-gap: 15px;
                 column-gap: 30px;
 
@@ -68,6 +69,7 @@
             .split {
                 display: grid;
                 grid-template-columns: 50% 50%;
+                text-align: left;
             }
         }
 
@@ -111,6 +113,10 @@
                 img {
                     height: 65px;
                 }
+            }
+
+            .experience .infos {
+                justify-content: left;
             }
 
             &>.elements, .certifs, .contests {
