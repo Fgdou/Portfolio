@@ -1,5 +1,7 @@
 # Fgdou's portfolio
 
+![Screenshot](./screenshot.png)
+
 A website representing my resume buit in rust with the [Yew](https://yew.rs/) framework.
 
 # Build
