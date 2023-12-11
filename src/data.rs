@@ -145,10 +145,10 @@ impl Default for Data {
             },
             projects: vec!(
                 ProjectData{
-                    name: AttrValue::from("AdventOfCode 2023"),
+                    name: AttrValue::from("AdventOfCode"),
                     github_link: Some(AttrValue::from("https://github.com/fgdou/Portfolio")),
                     demo_link: None,
-                    description: AttrValue::from("Resolving an algorithm based problem every day in Rust. This is a fun event before Christmas, and I participated every years since 2020."),
+                    description: AttrValue::from("In 2023 : resolving an algorithm based problem every day in Rust. This is a fun event before Christmas, and I participated every years since 2020."),
                     image: AttrValue::from("assets/img/projects/aoc.jpeg"),
                 },
                 ProjectData{
