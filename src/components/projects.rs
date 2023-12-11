@@ -32,7 +32,7 @@ pub fn Projects(props: &ProjectsProps) -> Html {
             <img class="imagePres animate" src={d.image.clone()} alt={d.name.clone()} />
         };
 
-        let imageLink = match (&d.github_link, &d.demo_link) {
+        let image_link = match (&d.github_link, &d.demo_link) {
             (_, Some(link)) | (Some(link), None) => html!{<a target="_blank" href={link.clone()}>{image}</a>},
             _ => {image}
         };
@@ -49,7 +49,7 @@ pub fn Projects(props: &ProjectsProps) -> Html {
                     </div>
                     <p class="description">{d.description.clone()}</p>
                 </div>
-                {imageLink}
+                {image_link}
             </div>
         }
     }).collect();
