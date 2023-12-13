@@ -84,7 +84,7 @@ impl Default for Data {
                         duration: AttrValue::from("3 Months"),
                         location: AttrValue::from("Carquefou, FR"),
                         skills: ["Java Springboot", "Jenkins", "VueJS", "SQL"].into_iter().map(AttrValue::from).collect(),
-                        softskills: ["Micro Services", "Team Work", "Stand-ip"].into_iter().map(AttrValue::from).collect(),
+                        softskills: ["Micro Services", "Team Work", "Stand-up"].into_iter().map(AttrValue::from).collect(),
                     }),
                 ),
                 schools: vec!(
