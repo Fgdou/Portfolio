@@ -15,7 +15,7 @@ impl Default for Data {
     fn default() -> Self {
         Self { 
             home_props: HomeProps{
-                fonction: AttrValue::from("Software Engineer"),
+                fonction: AttrValue::from("DevOps Software Engineer"),
                 name: AttrValue::from("Fabien GOARDOU"),
                 logo_list: vec!(
                     LogoListProps{
@@ -75,7 +75,7 @@ impl Default for Data {
                         duration: AttrValue::from("4 Months"),
                         location: AttrValue::from("Cambridge, UK"),
                         skills: ["AI", "Python", "HuggingFace", "AWS"].into_iter().map(AttrValue::from).collect(),
-                        softskills: ["Team Work", "SCRUM", "Communication"].into_iter().map(AttrValue::from).collect(),
+                        softskills: ["Team Work", "SCRUM", "Communication", "DevOps"].into_iter().map(AttrValue::from).collect(),
                     }),
                     Rc::from(ExperienceSingleData{
                         image: AttrValue::from("assets/img/uiris.png"),
@@ -84,7 +84,7 @@ impl Default for Data {
                         duration: AttrValue::from("3 Months"),
                         location: AttrValue::from("Carquefou, FR"),
                         skills: ["Java Springboot", "Jenkins", "VueJS", "SQL"].into_iter().map(AttrValue::from).collect(),
-                        softskills: ["Micro Services", "Team Work", "Stand-up"].into_iter().map(AttrValue::from).collect(),
+                        softskills: ["Micro Services", "Team Work", "Stand-up", "DevOps"].into_iter().map(AttrValue::from).collect(),
                     }),
                 ),
                 schools: vec!(
