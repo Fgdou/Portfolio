@@ -42,12 +42,12 @@ impl Default for Data {
                     LogoListProps{
                         logos: vec!(
                             LogoProps{
-                                name: AttrValue::from("Linux"),
-                                path: AttrValue::from("assets/img/linux.svg"),
+                                name: AttrValue::from("Docker"),
+                                path: AttrValue::from("assets/img/docker.svg"),
                             },
                             LogoProps{
-                                name: AttrValue::from("NodeJS"),
-                                path: AttrValue::from("assets/img/nodejs.svg"),
+                                name: AttrValue::from("Linux"),
+                                path: AttrValue::from("assets/img/linux.svg"),
                             },
                             LogoProps{
                                 name: AttrValue::from("React"),
