@@ -163,7 +163,7 @@ impl Default for Data {
                     github_link: Some(AttrValue::from("https://github.com/Fgdou/ProjProg2022")),
                     demo_link: None,
                     description: AttrValue::from("During this 30 hour project, we built from scratch a game on the adventure theme. The goal was to propose a playable game in not much time, but working with a list of requirement. There are no libraries or code except the SDL2."),
-                    image: AttrValue::from("assets/img/projects/adventuregame.png")
+                    image: AttrValue::from("assets/img/projects/projprog.gif")
                 },
                 ProjectData{
                     name: AttrValue::from("MandelbrotJS"),
