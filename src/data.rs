@@ -62,7 +62,7 @@ impl Default for Data {
                                 path: AttrValue::from("assets/img/aws.svg"),
                             },
                         ),
-                        title: AttrValue::from("Techologies")
+                        title: AttrValue::from("Technologies")
                     },
                 )
             },
