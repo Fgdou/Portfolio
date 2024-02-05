@@ -70,7 +70,7 @@ impl Default for Data {
                 jobs: vec!(
                     Rc::from(ExperienceSingleData{
                         image: AttrValue::from("assets/img/amazon.svg"),
-                        role: AttrValue::from("Software Developer Engineer"),
+                        role: AttrValue::from("Software Developer Engineer Intern"),
                         start: AttrValue::from("June 2023"),
                         duration: AttrValue::from("4 Months"),
                         location: AttrValue::from("Cambridge, UK"),
@@ -85,6 +85,33 @@ impl Default for Data {
                         location: AttrValue::from("Carquefou, FR"),
                         skills: ["Java Springboot", "Jenkins", "VueJS", "SQL"].into_iter().map(AttrValue::from).collect(),
                         softskills: ["Micro Services", "Team Work", "Stand-up", "DevOps"].into_iter().map(AttrValue::from).collect(),
+                    }),
+                    Rc::from(ExperienceSingleData{
+                        image: AttrValue::from("assets/img/adapei.png"),
+                        role: AttrValue::from("Intern"),
+                        start: AttrValue::from("June 2020"),
+                        duration: AttrValue::from("1 Month"),
+                        location: AttrValue::from("Plerin, FR"),
+                        skills: ["Windows Active Directory", "SQL", "PowerShell"].into_iter().map(AttrValue::from).collect(),
+                        softskills: ["Small Team", "Charity"].into_iter().map(AttrValue::from).collect()
+                    }),
+                    Rc::from(ExperienceSingleData{
+                        image: AttrValue::from("assets/img/ulog.svg"),
+                        role: AttrValue::from("Picker"),
+                        start: AttrValue::from("Apr. 2019"),
+                        duration: AttrValue::from("4 Years"),
+                        location: AttrValue::from("Plaintel, FR"),
+                        skills: ["Pallet making"].into_iter().map(AttrValue::from).collect(),
+                        softskills: ["Team", "Organization", "Performance"].into_iter().map(AttrValue::from).collect()
+                    }),
+                    Rc::from(ExperienceSingleData{
+                        image: AttrValue::from("assets/img/cjs.jpg"),
+                        role: AttrValue::from("Aid Worker"),
+                        start: AttrValue::from("Aug. 2018"),
+                        duration: AttrValue::from("2 Months"),
+                        location: AttrValue::from("St-Brieuc, FR"),
+                        skills: ["Company Creation", "Team Management"].into_iter().map(AttrValue::from).collect(),
+                        softskills: Vec::new(),
                     }),
                 ),
                 schools: vec!(
