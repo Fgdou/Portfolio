@@ -152,7 +152,7 @@ struct ContestsProps {
 fn Contests(props: &ContestsProps) -> Html {
     let elements: Html = props.data.clone().into_iter().map(|c| html!{
         html!{
-            <a class="animate" href={c.link.clone()}>{c.name.clone()}</a>
+            <a target="_blank" class="animate" href={c.link.clone()}>{c.name.clone()}</a>
         }
     }).collect();
 
