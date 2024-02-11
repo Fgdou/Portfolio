@@ -172,6 +172,13 @@ impl Default for Data {
             },
             projects: vec!(
                 ProjectData{
+                    name: AttrValue::from("Snake Multiplayer"),
+                    github_link: Some(AttrValue::from("https://github.com/Fgdou/sr_project")),
+                    demo_link: Some(AttrValue::from("https://sr.fgdou.ovh/")),
+                    description: AttrValue::from("A project made during a distributed system class. This is a real time massive multiplayer game."),
+                    image: AttrValue::from("assets/img/projects/snake.gif"),
+                },
+                ProjectData{
                     name: AttrValue::from("AdventOfCode"),
                     github_link: Some(AttrValue::from("https://github.com/Fgdou/AdventOfCode2023")),
                     demo_link: None,
