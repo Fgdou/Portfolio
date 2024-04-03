@@ -6,10 +6,10 @@
         text-align: center;
         &>.elements {
             display: flex;
-            flex-wrap: wrap;
+            flex-direction: column;
+            align-items: center;
             margin: 50px 0;
-            gap: 50px;
-            justify-content: center;
+            gap: 12px;
         }
 
         &>.icon-title {
@@ -36,13 +36,20 @@
         }
 
         .experience {
-            padding: 30px;
-            max-width: 400px;
-            border-radius: 50px;
-            box-shadow: 0px -5px 42px 0px rgba(0, 0, 0, 0.15);
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+            gap: 50px;
 
             &>img {
-                height: 55px;
+                width: 70px;
+            }
+            &>div {
+                display: flex;
+                gap: 7px;
+                flex-direction: column;
             }
 
             .infos {
@@ -51,19 +58,21 @@
                 justify-content: center;
                 row-gap: 15px;
                 column-gap: 30px;
+            }
+            .description {
+                text-align: justify;
+            }
+            .icon-title {
+                display: flex;
+                align-items: center;
 
-                .icon-title {
-                    display: flex;
-                    align-items: center;
-    
-                    img {
-                        height: 25px;
-                        margin-right: 10px;
-                    }
-                    font-size: 15px;
-                    font-weight: 500;
-                    text-align: center;
+                img {
+                    height: 25px;
+                    margin-right: 10px;
                 }
+                font-size: 15px;
+                font-weight: 700;
+                text-align: center;
             }
 
             .split {
@@ -104,19 +113,32 @@
     }
 }
 
+@media only screen and (min-width: 600px) {
+    .experiences {
+        .listing {
+            .experience {
+                .infos {
+                    justify-content: space-between;
+                }
+            }
+        }
+    }
+}
+
 @media only screen and (min-width: 1000px) {
     .experiences {
         .listing {
+            .experience {
+                flex-direction: row;
+                padding: 30px;
+            }
+
             text-align: left;
             &>.icon-title {
                 font-size: 50px;
                 img {
                     height: 65px;
                 }
-            }
-
-            .experience .infos {
-                justify-content: left;
             }
 
             &>.elements, .certifs, .contests {

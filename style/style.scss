@@ -23,7 +23,6 @@ h1, h2, h3 {
 
     max-width: 1000px;
     margin: auto;
-    padding: 20px;
 
     display: flex;
     flex-direction: column;
@@ -51,5 +50,9 @@ h1, h2, h3 {
     
     img.animate:hover {
         transform: translate(5px, -5px) rotate(1deg);
+    }
+
+    .container {
+        padding: 20px;
     }
 }

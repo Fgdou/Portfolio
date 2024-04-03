@@ -79,7 +79,7 @@ impl Default for Data {
                         description: AttrValue::from("Create and deploy an internal tool for AI scientists. Design documentation, team discussions, tool creation, tool test, tool deployment on AWS, documentation for hand-over.")
                     }),
                     Rc::from(ExperienceSingleData{
-                        image: AttrValue::from("assets/img/uiris.png"),
+                        image: AttrValue::from("assets/img/superu.svg"),
                         role: AttrValue::from("Software Developer Intern"),
                         start: AttrValue::from("June 2022"),
                         duration: AttrValue::from("3 Months"),
@@ -98,7 +98,7 @@ impl Default for Data {
                     //     softskills: ["Small Team", "Charity"].into_iter().map(AttrValue::from).collect(),
                     // }),
                     Rc::from(ExperienceSingleData{
-                        image: AttrValue::from("assets/img/ulog.svg"),
+                        image: AttrValue::from("assets/img/superu.svg"),
                         role: AttrValue::from("Picker"),
                         start: AttrValue::from("Apr. 2019"),
                         duration: AttrValue::from("4 Years"),
