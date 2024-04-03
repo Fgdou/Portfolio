@@ -10,7 +10,8 @@ pub struct ExperienceSingleData {
     pub duration: AttrValue,
     pub location: AttrValue,
     pub skills: Vec<AttrValue>,
-    pub softskills: Vec<AttrValue>
+    pub softskills: Vec<AttrValue>,
+    pub description: AttrValue,
 }
 
 #[derive(PartialEq)]
