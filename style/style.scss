@@ -17,7 +17,7 @@ h1, h2, h3 {
 }
 
 .container {
-    &>div {
+    &>div:first-child {
         padding-top: 150px;
     }
 
