@@ -10,7 +10,8 @@ pub struct ExperienceSingleData {
     pub duration: AttrValue,
     pub location: AttrValue,
     pub skills: Vec<AttrValue>,
-    pub softskills: Vec<AttrValue>
+    pub softskills: Vec<AttrValue>,
+    pub description: AttrValue,
 }
 
 #[derive(PartialEq)]
@@ -68,15 +69,18 @@ fn ExperienceSingle(props: &ExperienceSingleProps) -> Html {
     html!{
         <div class="experience">
             <img src={props.data.image.clone()} />
-            <div class="infos">
-                <IconTitle title={props.data.role.clone()} icon="assets/img/role.svg" />
-                <IconTitle title={props.data.start.clone()} icon="assets/img/calendar.svg" />
-                <IconTitle title={props.data.duration.clone()} icon="assets/img/time.svg" />
-                <IconTitle title={props.data.location.clone()} icon="assets/img/location.svg" />
-            </div>
-            <div class="split">
-                <SkillsList list={props.data.skills.clone()} />
-                <SkillsList list={props.data.softskills.clone()} />
+            <div>
+                <div class="infos">
+                    <IconTitle title={props.data.role.clone()} icon="assets/img/role.svg" />
+                </div>
+                <div class="infos">
+                    <IconTitle title={props.data.start.clone()} icon="assets/img/calendar.svg" />
+                    <IconTitle title={props.data.duration.clone()} icon="assets/img/time.svg" />
+                    <IconTitle title={props.data.location.clone()} icon="assets/img/location.svg" />
+                </div>
+                <div class="description">
+                    {props.data.description.clone()}
+                </div>
             </div>
         </div>
     }
