@@ -120,7 +120,7 @@ impl Default for Data {
                 schools: vec!(
                     Rc::from(ExperienceSingleData{
                         image: AttrValue::from("assets/img/esir.png"),
-                        role: AttrValue::from("Software Engineer Master"),
+                        role: AttrValue::from("Software Engineer Degree"),
                         start: AttrValue::from("Sept. 2019"),
                         duration: AttrValue::from("5 Years"),
                         location: AttrValue::from("Rennes, FR"),
