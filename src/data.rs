@@ -15,7 +15,7 @@ impl Default for Data {
     fn default() -> Self {
         Self { 
             home_props: HomeProps{
-                fonction: AttrValue::from("DevOps Software Engineer"),
+                fonction: AttrValue::from("Software Developer Engineer"),
                 name: AttrValue::from("Fabien GOARDOU"),
                 logo_list: vec!(
                     LogoListProps{
