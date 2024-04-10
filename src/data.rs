@@ -76,7 +76,7 @@ impl Default for Data {
                         location: AttrValue::from("Cambridge, UK"),
                         skills: ["AI", "Python", "HuggingFace", "AWS"].into_iter().map(AttrValue::from).collect(),
                         softskills: ["Team Work", "SCRUM", "Communication", "DevOps"].into_iter().map(AttrValue::from).collect(),
-                        description: AttrValue::from("Create and deploy an internal tool for AI scientists. Design documentation, team discussions, tool creation, tool test, tool deployment on AWS, documentation for hand-over.")
+                        description: AttrValue::from("Create and deploy an internal tool for AI scientists. Design documentation, team discussions, tool creation, tool test, tool deployment on AWS, documentation for hand-over. Discover a great diversity of people, and be an active member of the intern's community.")
                     }),
                     Rc::from(ExperienceSingleData{
                         image: AttrValue::from("assets/img/superu.svg"),
@@ -86,7 +86,7 @@ impl Default for Data {
                         location: AttrValue::from("Carquefou, FR"),
                         skills: ["Java Springboot", "Jenkins", "VueJS", "SQL"].into_iter().map(AttrValue::from).collect(),
                         softskills: ["Micro Services", "Team Work", "Stand-up", "DevOps"].into_iter().map(AttrValue::from).collect(),
-                        description: AttrValue::from("Creating a WebApp for SQL data extraction in an IBM database. Full-stack development, dev-ops with jenkins and kubernetes integration.")
+                        description: AttrValue::from("Creating a WebApp for SQL data extraction in an IBM database. Full-stack development, dev-ops with Jenkins and Kubernetes integration. First experience in agile team, and continuous integration.")
                     }),
                     // Rc::from(ExperienceSingleData{
                     //     image: AttrValue::from("assets/img/adapei.png"),
@@ -181,6 +181,13 @@ impl Default for Data {
                     demo_link: Some(AttrValue::from("https://sr.fgdou.ovh/")),
                     description: AttrValue::from("A project made during a distributed system class. This is a real time massive multiplayer game."),
                     image: AttrValue::from("assets/img/projects/snake.gif"),
+                },
+                ProjectData{
+                    name: AttrValue::from("HomeLab Server"),
+                    github_link: Some(AttrValue::from("https://github.com/Fgdou/homelab-compose")),
+                    demo_link: Some(AttrValue::from("https://apps.fgdou.ovh/")),
+                    description: AttrValue::from("A Collection of docker open-source services. Managing a Linux environement."),
+                    image: AttrValue::from("assets/img/projects/homelab.png"),
                 },
                 ProjectData{
                     name: AttrValue::from("AdventOfCode"),
