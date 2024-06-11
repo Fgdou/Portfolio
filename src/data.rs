@@ -226,7 +226,7 @@ impl Default for Data {
                 },
             ),
             contact: ContactData { 
-                email: AttrValue::from("fabigoardou@gmail.com"), 
+                email: AttrValue::from("contact@fgdou.ovh"), 
                 linkedin: AttrValue::from("https://www.linkedin.com/in/fgdou/"), 
                 github: AttrValue::from("https://www.github.com/Fgdou"), 
                 instagram: AttrValue::from("https://www.instagram.com/Fgdou/"), 
