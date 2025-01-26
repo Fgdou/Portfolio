@@ -70,6 +70,26 @@ impl Default for Data {
                 jobs: vec!(
                     Rc::from(ExperienceSingleData{
                         image: AttrValue::from("assets/img/amazon.svg"),
+                        role: AttrValue::from("AWS Software Developer Engineer"),
+                        start: AttrValue::from("October 2024"),
+                        duration: AttrValue::from("Until now"),
+                        location: AttrValue::from("Dublin, Ireland"),
+                        skills: ["AWS", "Java", "RDS Service", "AWS", "RDS", "DevOps"].into_iter().map(AttrValue::from).collect(),
+                        softskills: ["Document Writing", "Ideas proposal"].into_iter().map(AttrValue::from).collect(),
+                        description: AttrValue::from("Managing a service used my millions of users in AWS : Relational Database Service. In a high performance team, propose new ideas, find solutions and collaborate with engineers to maintain and develop new features.")
+                    }),
+                    Rc::from(ExperienceSingleData{
+                        image: AttrValue::from("assets/img/capgemini.svg"),
+                        role: AttrValue::from("Software Engineer Apprentice"),
+                        start: AttrValue::from("October 2023"),
+                        duration: AttrValue::from("1 year"),
+                        location: AttrValue::from("Rennes, France"),
+                        skills: ["Kubernetes", "Ansible", "VMware", "Linux"].into_iter().map(AttrValue::from).collect(),
+                        softskills: ["SAFe"].into_iter().map(AttrValue::from).collect(),
+                        description: AttrValue::from("Deployed a Kubernetes Cluster Factory in an Air Gap environment. Configured GPU ready clusters and handled Nvidia Licensing Servers.")
+                    }),
+                    Rc::from(ExperienceSingleData{
+                        image: AttrValue::from("assets/img/amazon.svg"),
                         role: AttrValue::from("Software Developer Engineer Intern"),
                         start: AttrValue::from("June 2023"),
                         duration: AttrValue::from("4 Months"),
@@ -97,16 +117,16 @@ impl Default for Data {
                     //     skills: ["Windows Active Directory", "SQL", "PowerShell"].into_iter().map(AttrValue::from).collect(),
                     //     softskills: ["Small Team", "Charity"].into_iter().map(AttrValue::from).collect(),
                     // }),
-                    Rc::from(ExperienceSingleData{
-                        image: AttrValue::from("assets/img/superu.svg"),
-                        role: AttrValue::from("Picker"),
-                        start: AttrValue::from("Apr. 2019"),
-                        duration: AttrValue::from("4 Years"),
-                        location: AttrValue::from("Plaintel, FR"),
-                        skills: ["Pallet making"].into_iter().map(AttrValue::from).collect(),
-                        softskills: ["Team", "Organization", "Performance"].into_iter().map(AttrValue::from).collect(),
-                        description: AttrValue::from("Job to earn money during scholarship. I learned early how to work in a team and understand business processes.")
-                    }),
+                    // Rc::from(ExperienceSingleData{
+                    //     image: AttrValue::from("assets/img/superu.svg"),
+                    //     role: AttrValue::from("Picker"),
+                    //     start: AttrValue::from("Apr. 2019"),
+                    //     duration: AttrValue::from("4 Years"),
+                    //     location: AttrValue::from("Plaintel, FR"),
+                    //     skills: ["Pallet making"].into_iter().map(AttrValue::from).collect(),
+                    //     softskills: ["Team", "Organization", "Performance"].into_iter().map(AttrValue::from).collect(),
+                    //     description: AttrValue::from("Job to earn money during scholarship. I learned early how to work in a team and understand business processes.")
+                    // }),
                     // Rc::from(ExperienceSingleData{
                     //     image: AttrValue::from("assets/img/cjs.jpg"),
                     //     role: AttrValue::from("Aid Worker"),
