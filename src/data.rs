@@ -116,7 +116,7 @@ impl Default for Data {
                         location: AttrValue::from("Plerin, FR"),
                         skills: ["Windows Active Directory", "SQL", "PowerShell"].into_iter().map(AttrValue::from).collect(),
                         softskills: ["Small Team", "Charity"].into_iter().map(AttrValue::from).collect(),
-                        description: AttrValue::from("Developped a script for user synchronisation between LDAP Server and HR tool")
+                        description: AttrValue::from("Developped a bash script for user synchronisation between a windows active directory and HR tool database in SQL, that runs every week.")
                     }),
                     Rc::from(ExperienceSingleData{
                         image: AttrValue::from("assets/img/superu.svg"),
@@ -136,7 +136,7 @@ impl Default for Data {
                         location: AttrValue::from("St-Brieuc, FR"),
                         skills: ["Company Creation", "Team Management"].into_iter().map(AttrValue::from).collect(),
                         softskills: Vec::new(),
-                        description: AttrValue::from("Build a mini company for summer for providing services.")
+                        description: AttrValue::from("Build a mini company for summer for providing services, such as painting and grass removal. Made marketing and advertisement, prepared the tool for the team, made the invoices and tax declaration.")
                     }),
                 ),
                 schools: vec!(
@@ -158,7 +158,7 @@ impl Default for Data {
                         location: AttrValue::from("St Brieuc, FR"),
                         skills: ["Maths", "Physics", "Software Engineering"].into_iter().map(AttrValue::from).collect(),
                         softskills: Vec::new(),
-                        description: AttrValue::from("High school with Engineering Science as a choosen option. Made 2 school projects.")
+                        description: AttrValue::from("High school with Engineering Science as a optional option. Made 2 school projects. Classes : Maths, Physic, Industial Engineering.")
                     })
                 ),
                 certifs: vec!(
