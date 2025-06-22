@@ -116,6 +116,7 @@ impl Default for Data {
                         location: AttrValue::from("Plerin, FR"),
                         skills: ["Windows Active Directory", "SQL", "PowerShell"].into_iter().map(AttrValue::from).collect(),
                         softskills: ["Small Team", "Charity"].into_iter().map(AttrValue::from).collect(),
+                        description: AttrValue::from("Developped a script for user synchronisation between LDAP Server and HR tool")
                     }),
                     Rc::from(ExperienceSingleData{
                         image: AttrValue::from("assets/img/superu.svg"),
@@ -135,6 +136,7 @@ impl Default for Data {
                         location: AttrValue::from("St-Brieuc, FR"),
                         skills: ["Company Creation", "Team Management"].into_iter().map(AttrValue::from).collect(),
                         softskills: Vec::new(),
+                        description: AttrValue::from("Build a mini company for summer for providing services.")
                     }),
                 ),
                 schools: vec!(
@@ -155,7 +157,7 @@ impl Default for Data {
                         duration: AttrValue::from(""),
                         location: AttrValue::from("St Brieuc, FR"),
                         skills: ["Maths", "Physics", "Software Engineering"].into_iter().map(AttrValue::from).collect(),
-                        softskills: [].into_iter().map(AttrValue::from).collect(),
+                        softskills: Vec::new(),
                         description: AttrValue::from("High school with Engineering Science as a choosen option. Made 2 school projects.")
                     })
                 ),
