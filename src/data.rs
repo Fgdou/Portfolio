@@ -217,7 +217,7 @@ impl Default for Data {
                 ProjectData{
                     name: AttrValue::from("HomeLab Server"),
                     github_link: Some(AttrValue::from("https://github.com/Fgdou/homelab-compose")),
-                    demo_link: Some(AttrValue::from("https://apps.fgdou.ovh/")),
+                    demo_link: Some(AttrValue::from("https://auth.fgdou.ovh/")),
                     description: AttrValue::from("A Collection of docker open-source services. Managing a Linux environement."),
                     image: AttrValue::from("assets/img/projects/homelab.png"),
                 },
