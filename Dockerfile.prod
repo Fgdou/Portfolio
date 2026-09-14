@@ -1,24 +1,40 @@
-FROM rust as builder
+FROM rust:1-slim as builder
 
+# Install C compiler required for crates with C bindings (like minify-html)
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    build-essential \
+    pkg-config \
+    libssl-dev \
+    && rm -rf /var/lib/apt/lists/*
+
+# Add WebAssembly compilation target
 RUN rustup target add wasm32-unknown-unknown
-RUN cargo install --locked trunk
 
-RUN cd / && cargo new app && cd app
+# Install Trunk
+RUN cargo install --locked trunk
 
 WORKDIR /app
 
+# Copy dependency manifests
 COPY Cargo.toml Cargo.lock ./
-RUN cargo build --release
 
+# Dummy build targeting WebAssembly to cache dependencies properly
+RUN mkdir src && \
+    echo "fn main() {}" > src/main.rs && \
+    trunk build --release && \
+    rm -rf src
+
+# Copy actual project assets and source
 COPY index.html .
 COPY assets ./assets
 COPY style ./style
 COPY src ./src
 
+# Build production WebAssembly bundle
 RUN trunk build --release
 
-
-FROM nginx as prod
+# Production stage using Nginx
+FROM nginx:alpine as prod
 
 EXPOSE 80
 
