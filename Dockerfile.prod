@@ -1,13 +1,20 @@
 FROM rust:1-slim as builder
 
-# Install build tools for crates with C dependencies (like minify-html)
+# Dépendances nécessaires pour compiler du C vers wasm32
 RUN apt-get update && apt-get install -y --no-install-recommends \
-    build-essential \
+    clang \
+    lld \
+    llvm \
+    binaryen \
     pkg-config \
     libssl-dev \
     && rm -rf /var/lib/apt/lists/*
 
-# Add WebAssembly compilation target
+# Configurer Clang comme compilateur C/C++ par défaut
+ENV CC=clang
+ENV CXX=clang++
+
+# Ajout de la cible WASM
 RUN rustup target add wasm32-unknown-unknown
 
 # Install Trunk
