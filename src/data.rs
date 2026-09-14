@@ -70,7 +70,7 @@ impl Default for Data {
                 jobs: vec!(
                     Rc::from(ExperienceSingleData{
                         image: AttrValue::from("assets/img/Atos.svg"),
-                        role: AttrValue::from("ROA - Operational engineer"),
+                        role: AttrValue::from("Site Reliability Engineer"),
                         start: AttrValue::from("January 2026"),
                         duration: AttrValue::from("Until now"),
                         location: AttrValue::from("Marseille, France"),
