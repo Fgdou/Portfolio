@@ -1,38 +1,28 @@
 FROM rust:1-slim as builder
 
-# Dépendances nécessaires pour compiler du C vers wasm32
 RUN apt-get update && apt-get install -y --no-install-recommends \
-    clang \
-    lld \
-    llvm \
-    binaryen \
+    curl \
+    build-essential \
     pkg-config \
     libssl-dev \
     && rm -rf /var/lib/apt/lists/*
 
-# Configurer Clang comme compilateur C/C++ par défaut
-ENV CC=clang
-ENV CXX=clang++
+# Téléchargement direct du binaire Trunk pré-compilé
+RUN curl -L --proto '=https' --tlsv1.2 -sSf https://github.com/trunk-rs/trunk/releases/latest/download/trunk-x86_64-unknown-linux-gnu.tar.gz | tar -xzf - -C /usr/local/bin
 
-# Ajout de la cible WASM
 RUN rustup target add wasm32-unknown-unknown
-
-# Install Trunk
-RUN cargo install --locked trunk
 
 WORKDIR /app
 
-# Copy all project files into the build container
 COPY Cargo.toml Cargo.lock ./
 COPY index.html ./
 COPY assets ./assets
 COPY style ./style
 COPY src ./src
 
-# Single production build step
 RUN trunk build --release
 
-# Production stage using Nginx
+
 FROM nginx:alpine as prod
 
 EXPOSE 80
