@@ -69,10 +69,20 @@ impl Default for Data {
             experiences: ExperienceData{
                 jobs: vec!(
                     Rc::from(ExperienceSingleData{
+                        image: AttrValue::from("assets/img/Atos.svg"),
+                        role: AttrValue::from("ROA - Operational engineer"),
+                        start: AttrValue::from("January 2026"),
+                        duration: AttrValue::from("Until now"),
+                        location: AttrValue::from("Marseille, France"),
+                        skills: ["SQL", "Linux", "Python", "Teradata", "Kubernetes", "DevOps"].into_iter().map(AttrValue::from).collect(),
+                        softskills: ["Ideas proposal"].into_iter().map(AttrValue::from).collect(),
+                        description: AttrValue::from("Delivering and maintaining model transformations for a Big Data warehouse. Crafting automations to speed up the deployment process, enforcing good practices on teams to ensure code quality.")
+                    }),
+                    Rc::from(ExperienceSingleData{
                         image: AttrValue::from("assets/img/amazon.svg"),
                         role: AttrValue::from("AWS Software Developer Engineer"),
                         start: AttrValue::from("October 2024"),
-                        duration: AttrValue::from("Until now"),
+                        duration: AttrValue::from("1.5 year"),
                         location: AttrValue::from("Dublin, Ireland"),
                         skills: ["AWS", "Java", "RDS Service", "AWS", "RDS", "DevOps"].into_iter().map(AttrValue::from).collect(),
                         softskills: ["Document Writing", "Ideas proposal"].into_iter().map(AttrValue::from).collect(),
@@ -207,6 +217,13 @@ impl Default for Data {
                 )
             },
             projects: vec!(
+                ProjectData{
+                    name: AttrValue::from("Todo App"),
+                    github_link: Some(AttrValue::from("https://github.com/Fgdou/todoapp")),
+                    demo_link: Some(AttrValue::from("https://todo.fgdou.ovh/")),
+                    description: AttrValue::from("A 100% Rust based full-stack applications for tasks. No AI was used to fully learn. Implemented OpenID Connect Client from scratch."),
+                    image: AttrValue::from("assets/img/projects/todo.gif"),
+                },
                 ProjectData{
                     name: AttrValue::from("Snake Multiplayer"),
                     github_link: Some(AttrValue::from("https://github.com/Fgdou/sr_project")),
